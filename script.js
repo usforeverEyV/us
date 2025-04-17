@@ -129,20 +129,3 @@ function createConfetti() {
   }
 }
 
-function showMessage(id) {
-  document.querySelectorAll('.message-box').forEach(m => m.classList.remove('active'));
-  const box = document.getElementById(id);
-  box.classList.add('active');
-
-  if (id === 'aniversario') {
-    confetti({
-      particleCount: 200,
-      spread: 100,
-      origin: { y: 0.6 }
-    });
-  }
-}
-
-function closeMessage() {
-  document.querySelectorAll('.message-box').forEach(m => m.classList.remove('active'));
-}
